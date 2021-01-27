@@ -22,13 +22,13 @@
             box-shadow: 0 0 16px rgba(0, 0, 0, 0.7);
         }
 
-        #main{
-            border: 2px solid #ddd;
+	h1, h2, h3{
+            font-family: 'Century Gothic', monospace;
         }
 
-        h1, h2, h3{
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
+	header{
+	    padding: 30px 15px;
+	}
 
         #logo{
             float: left;
@@ -44,6 +44,48 @@
             width: 30%;
         }
 
+        #main{
+            border-left: 2px solid #ddd;
+	    border-right: 2px solid #ddd;
+        }
+
+	.clearfix::before, .clearfix::after, .block::before, .block::after{
+	    content: "";
+	    display: table;
+	}
+
+	.clearfix::after, .block:after{ 
+	    clear: both; 
+	}
+
+	.alignright{
+	    float: right;
+	    margin-left: 15px;
+	}
+
+	.alignleft{
+	    float: left;
+	    margin-right: 15px;
+	}
+
+	.block{
+	    padding: 30px;
+	}
+
+	.block:nth-child(odd){
+	    background-color: #f8f8f8;
+	    border-bottom: 2px solid #ddd;
+	    border-top: 2px solid #ddd;
+	}
+	
+	.block img {
+	    border: 2px solid #ddd;
+	    border-radius: 50%;
+	}
+	
+	.block:first-child, .block:last-child{
+	    text-align: center;
+	}
     </style>
 </head>
 
